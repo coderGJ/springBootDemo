@@ -13,9 +13,9 @@ spring:
     settings:
       number_format: '0.##'   #数字格式化，无小数点
   datasource:
-    url: jdbc:mysql:///quick_water
+    url: jdbc:mysql:///qqs_safety
     username: root
-    data-password: hefei2018
+    password: security!123
   profiles:
     active: development
 logging:
