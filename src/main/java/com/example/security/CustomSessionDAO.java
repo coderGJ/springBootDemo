@@ -40,7 +40,7 @@ public class CustomSessionDAO extends EnterpriseCacheSessionDAO {
 
         //用户名
         String username = (String) SecurityUtils.getSubject().getPrincipal();
-        log.debug("username {} do update", username);
+        log.debug("username is [ {} ], do update", username);
     }
 
     @Override

@@ -29,7 +29,7 @@ public class CustomWebSessionManager extends DefaultWebSessionManager {
             request = ((WebSessionKey) sessionKey).getServletRequest();
             Session session = (Session) request.getAttribute(sessionId.toString());
             if (session != null) {
-                log.debug("retrieveSession by request");
+                log.trace("retrieveSession by request");
                 return session;
             }
         }

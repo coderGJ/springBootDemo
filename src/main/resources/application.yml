@@ -13,13 +13,18 @@ spring:
     settings:
       number_format: '0.##'   #数字格式化，无小数点
   datasource:
-    url: jdbc:mysql:///qqs_safety
-    username: root
-    password: security!123
+    url: jdbc:mysql:///spring_boot_demo?characterEncoding=UTF-8&useUnicode=true
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: demo
+    password: demo123
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
   profiles:
     active: development
 logging:
-  level:
-    com.example: debug
-  path: /doc/logs/demo/
-  file: demo.log
+  config: classpath:log/logback-spring.xml
+  path: F:\\logs\\springBootDemo
+  file: F:\\logs\\springBootDemo\\demo.log

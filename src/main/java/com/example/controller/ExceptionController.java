@@ -50,7 +50,7 @@ public class ExceptionController implements ErrorController {
      * @param response
      * @return
      */
-    @RequestMapping(produces = "text/html",value = "404")
+    @RequestMapping(produces = "text/html", value = "404")
     public ModelAndView errorHtml404(HttpServletRequest request,
                                      HttpServletResponse response) {
         response.setStatus(getStatus(request).value());
@@ -100,7 +100,7 @@ public class ExceptionController implements ErrorController {
         Map<String, Object> body = getErrorAttributes(request,
             isIncludeStackTrace(request, MediaType.TEXT_HTML));
         HttpStatus status = getStatus(request);
-        return new ResponseEntity<Map<String, Object>>(body, status);
+        return new ResponseEntity<>(body, status);
     }
 
 
