@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class AccessController extends AbstractController {
 
     @Autowired
+    public AccessController(BaseUserRepository userRepository){
+        this.userRepository = userRepository;
+    }
+
     private BaseUserRepository userRepository;
 
     @GetMapping(value = "/login")

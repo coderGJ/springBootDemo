@@ -13,7 +13,8 @@ spring:
     settings:
       number_format: '0.##'   #数字格式化，无小数点
   datasource:
-    url: jdbc:mysql:///spring_boot_demo?characterEncoding=UTF-8&useUnicode=true
+    #url: jdbc:mysql:///spring_boot_demo?characterEncoding=UTF-8&useUnicode=true
+    url: jdbc:mysql:///share_analyse?characterEncoding=UTF-8&useUnicode=true
     type: com.alibaba.druid.pool.DruidDataSource
     username: demo
     password: demo123
