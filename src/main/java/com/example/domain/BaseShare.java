@@ -3,14 +3,20 @@ package com.example.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.TableGenerator;
 import java.util.Date;
 
 @Entity
 public class BaseShare {
 
     @Id
-    @GeneratedValue
+    @TableGenerator(
+        name = "AppSeqStore",
+        initialValue = 0,
+        allocationSize = 1 )
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "AppSeqStore")
     private Integer id;
 
     /**公司代码**/
